@@ -12,41 +12,41 @@ your program reads a size of 5, it should print
 using namespace std ;
 
 int main(){
-    int counter(1) , side (0) ,row(1) ;
-    cout << " Enter side : " ;
-    cin >> side ;
+    int counter(1) , side (0) ,row(1) ;      //initialize the counter to (1) and the square side value to (0) and the row wight counter(1). 
+    cout << "Enter side : (from 1 to 20)" ;  // prompet message to ask the user how tall and weight of square u want .
+    cin >> side ; //input the side value .
     
-    while (counter<=side){
-        if(counter == 1){
-            while (row<=side){
+    while (counter<=side){        //while counter less than or equal to side 
+        if(counter == 1){         //if counter equal the first , to make just print the top side full asterisk ***** .
+            while (row<=side){    //while the row less than or equal side value print (*) the first side .  
                 cout <<"*" ;
                 row++ ;
             }
-            row = 1 ;
+            row = 1 ;           // revalue the row to 1 to use it again in the next . 
             cout<<endl<<endl ;
         }
 
-        if(counter != 1){
-            if(counter != side){
+        if(counter != 1){             // if the counter not the first 
+            if(counter != side){      // if the counter not the final
             
-            cout << "*";
-            while(row<=side-2){
+            cout << "*";              // print just one  (*) in the left rectangle side  
+            while(row<=side-2){       //while row less than or equal the side value -2 (dont print the first and the final )
 
             
-                cout<<" ";
-                row++;
+                cout<<" ";            //prin blanks between the two asterisks . 
+                row++;                // add one to the row counter 
             
             }
-            row = 1 ;
-            cout << "*";
+            row = 1 ;                // revalue the row to 1 to use it again in the next .
+            cout << "*";             // print the right side 
             cout << endl << endl ;
 
             }
         }
 
-        if(counter == side){
-            while(row<=side){
-                cout << "*" ;
+        if(counter == side){            //if the counter equal final , to print just the bottom side full asterisk ***** .
+            while(row<=side){           //while row less than or equal side .
+                cout << "*" ;           
                 row++ ;
             }
             row = 1 ;
